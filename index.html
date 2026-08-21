@@ -4,30 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HYOMIN PORTAL - 효민 유니버스</title>
-    
+
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7480320301712613"
      crossorigin="anonymous"></script>
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Pretendard:wght@400;700;900&display=swap');
+        * { box-sizing: border-box; }
         body {
-            margin: 0; padding: 0; height: 100vh;
+            margin: 0; padding: 40px 20px; min-height: 100vh;
             display: flex; flex-direction: column; justify-content: center; align-items: center;
             background-color: #0F172A; color: #FFFFFF; font-family: 'Pretendard', sans-serif;
             text-align: center;
         }
-        .title { font-size: 3.5rem; font-weight: 900; color: #3B82F6; margin-bottom: 10px; letter-spacing: 2px; }
-        .subtitle { font-size: 1.2rem; color: #94A3B8; margin-bottom: 50px; }
+        .title { font-size: 3rem; font-weight: 900; color: #3B82F6; margin-bottom: 10px; letter-spacing: 2px; }
+        .subtitle { font-size: 1.1rem; color: #94A3B8; margin-bottom: 40px; }
+
+        .card-group {
+            display: flex; flex-direction: column; gap: 18px; align-items: stretch;
+            width: 100%; max-width: 440px;
+        }
+        .service-card {
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(148,163,184,0.25);
+            border-radius: 20px;
+            padding: 22px 24px;
+            text-align: left;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+        .service-card:hover { transform: translateY(-3px); border-color: rgba(148,163,184,0.5); }
+        .service-card.primary {
+            background: linear-gradient(135deg, rgba(37,99,235,0.25), rgba(59,130,246,0.15));
+            border-color: rgba(59,130,246,0.6);
+        }
+        .service-name { font-size: 1.25rem; font-weight: 700; margin-bottom: 6px; }
+        .service-desc { font-size: 0.92rem; color: #94A3B8; line-height: 1.5; margin-bottom: 16px; }
         .enter-btn {
+            display: inline-block;
             background: linear-gradient(135deg, #2563EB, #3B82F6);
             color: #FFFFFF; text-decoration: none;
-            padding: 18px 40px; font-size: 1.2rem; font-weight: 700;
-            border-radius: 30px; box-shadow: 0 10px 25px rgba(37,99,235,0.4);
+            padding: 12px 28px; font-size: 1rem; font-weight: 700;
+            border-radius: 24px; box-shadow: 0 8px 20px rgba(37,99,235,0.35);
             transition: transform 0.2s, box-shadow 0.2s;
         }
-        .enter-btn:hover {
-            transform: translateY(-5px); box-shadow: 0 15px 35px rgba(37,99,235,0.6);
+        .enter-btn:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(37,99,235,0.5); }
+        .enter-btn.secondary {
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(148,163,184,0.4);
+            box-shadow: none;
         }
+        .enter-btn.secondary:hover { box-shadow: 0 8px 20px rgba(148,163,184,0.2); }
+
         /* 애드센스 광고가 뜰 예비 공간 */
         .ad-space { margin-top: 50px; width: 100%; max-width: 728px; min-height: 90px; }
     </style>
@@ -36,10 +63,40 @@
 
     <div class="title">HYOMIN PORTAL</div>
     <div class="subtitle">하나의 계정으로 효민 유니버스의 모든 서비스를 통합 이용하세요.</div>
-    
-    <a href="https://hyomin-app-2gv2xbsxqhrftspwcpgqqw.streamlit.app" class="enter-btn">
-        포털 입장하기 🚀
-    </a>
+
+    <div class="card-group">
+
+        <div class="service-card primary">
+            <div class="service-name">🏠 효민 포털</div>
+            <div class="service-desc">
+                도파민 넘치는 경제 게임부터 다양한 콘텐츠까지, 여러 서비스를 한 번에 즐기고 싶다면 여기서 시작하세요.
+            </div>
+            <a href="https://hyomin-app-2gv2xbsxqhrftspwcpgqqw.streamlit.app" class="enter-btn">
+                포털 입장하기 🚀
+            </a>
+        </div>
+
+        <div class="service-card">
+            <div class="service-name">💰 머니레벨업</div>
+            <div class="service-desc">
+                가계부·모의투자·예적금·리스크 체험관(금융사기 대응, 레버리지, 시장 위기 리플레이)까지 갖춘 AI 금융 교육 시뮬레이션. 레벨·뱃지로 재미있게 재테크 습관을 쌓아보세요.
+            </div>
+            <a href="https://money-levelup-abivksfmobudanft8ag23b.streamlit.app" class="enter-btn secondary">
+                시작하기
+            </a>
+        </div>
+
+        <div class="service-card">
+            <div class="service-name">🏋️ 헬린이 루틴</div>
+            <div class="service-desc">
+                오늘의 운동을 기록하고 휴식 타이머·PR·연속 기록 스트릭을 관리하는 홈트 앱. 종목별 랭킹과 뱃지로 다른 유저들과 함께 동기부여받으며 운동할 수 있어요.
+            </div>
+            <a href="https://hellini-routine-app-admdv3fx4kc3zmgjcaaiv5.streamlit.app" class="enter-btn secondary">
+                시작하기
+            </a>
+        </div>
+
+    </div>
 
     <div class="ad-space">
         </div>
